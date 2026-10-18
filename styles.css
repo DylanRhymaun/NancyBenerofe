@@ -3901,3 +3901,10 @@ input, select, textarea {
 			}
 
 		}
+
+/* Custom additions */
+	.gallery img {
+		width: 300px;
+		height: 300px;
+		object-fit: cover;
+	}
