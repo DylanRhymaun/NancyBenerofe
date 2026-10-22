@@ -3908,3 +3908,25 @@ input, select, textarea {
 		height: 300px;
 		object-fit: cover;
 	}
+
+.profile-section {
+    padding: 0 10%;
+    overflow: hidden; /* contains the float so the section wraps it */
+}
+
+.profile-section img {
+    float: left;
+    width: 500px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 24px 16px 0;
+    border-radius: 8px;
+}
+
+@media (max-width: 700px) {
+    .profile-section img {
+        float: none;
+        display: block;
+        margin: 0 auto 16px;
+    }
+}
