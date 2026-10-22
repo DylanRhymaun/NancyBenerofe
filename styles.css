@@ -3930,3 +3930,48 @@ input, select, textarea {
         margin: 0 auto 16px;
     }
 }
+
+.image-strip {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+    margin: 2rem 0;
+}
+
+.image-strip img {
+    flex: 1 1 0;
+    min-width: 0;
+    height: 260px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+    display: block;
+}
+
+/* Tablet: slightly shorter strip */
+@media (max-width: 900px) {
+    .image-strip {
+        gap: 8px;
+    }
+
+    .image-strip img {
+        height: 180px;
+    }
+}
+
+/* Mobile: horizontal swipe strip */
+@media (max-width: 600px) {
+    .image-strip {
+        overflow-x: auto;
+        gap: 8px;
+        padding-bottom: 8px;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .image-strip img {
+        flex: 0 0 70%;
+        height: 200px;
+        scroll-snap-align: start;
+    }
+}
